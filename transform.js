@@ -1,6 +1,7 @@
 const through = require('through2');
 
 // through2([ options, ] [ transformFunction ] [, flushFunction ])
+// options: for example objectMode -> pass JS objects instead of String or Buffer
 var transformStream = through(transformFunction, flushFunction);
 
 process.stdin.pipe(transformStream).pipe(process.stdout);
